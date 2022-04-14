@@ -68,7 +68,7 @@ let setupList = () => {
         let index = listItems.length - (listItems.length - orderedList.childElementCount);
         for (let i = index; i < listItems.length; i++){
             let newListItem = document.createElement('li');
-            newListItem.innerText = listItems[i].item;
+            newListItem.innerText = listItems[i];
             orderedList.appendChild(newListItem);
         }
     }
@@ -79,9 +79,7 @@ setupList();
 //CLICK LISTENER
 addItemButton.addEventListener('click', function(){
     setupList();
-    let newListItem = {
-        item: listInput.value,
-    }
+    let newListItem = listInput.value;
     listItems.push(newListItem)
     localStorage.setItem('list', JSON.stringify(listItems));
     let listItem = document.createElement('li');
