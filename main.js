@@ -20,7 +20,6 @@ setupInputText();
 
 //CLICK LISTENER
 enterButton.addEventListener('click', function(){
-    setupInputText();
     localStorage.setItem('text', textInput.value);
     inputTextValue = localStorage.getItem('text');
     displayInputText.innerText = inputTextValue;
